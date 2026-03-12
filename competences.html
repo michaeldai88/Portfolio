@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title> Site E-Portfolio </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    </head>
+    <body>        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+        
+        <!-- partie bootstrap navbar -->
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">Portfolio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title menu" id="offcanvasDarkNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                            <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
+                            <li class="nav-item"><a class="nav-link" href="experiences.html">Expériences</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="competences.html">Compétences</a></li>
+                            <li class="nav-item"><a class="nav-link" href="loisirs.html">Loisirs</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- fin de la partie bootstrap navbar -->
+
+        <img src="Images/upc.jpg" alt="logo paris cite" class="upc">
+
+        <div class="titre">
+            <h1> Compétences </h1>
+        </div>
+
+        <!-- partie bootstrap carousel -->
+        <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Slide 10"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10" aria-label="Slide 11"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="11" aria-label="Slide 12"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="12" aria-label="Slide 13"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="13" aria-label="Slide 14"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="14" aria-label="Slide 15"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="15" aria-label="Slide 16"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="16" aria-label="Slide 17"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active logo">
+                <img src="Images/python.png" class="d-block w-100" alt="python">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Python</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/R.png" class="d-block w-100" alt="Rstudio">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>R Studio</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/sql.png" class="d-block w-100" alt="sql">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>SQL</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/sas.png" class="d-block w-100" alt="sas">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>SAS</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/word.png" class="d-block w-100" alt="word">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Word</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/excel.png" class="d-block w-100" alt="excel">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Excel</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/ppt.png" class="d-block w-100" alt="powerpoint">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>PowerPoint</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/access.png" class="d-block w-100" alt="access">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Access</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/pbi.png" class="d-block w-100" alt="powerbi">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Power BI</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/azure.png" class="d-block w-100" alt="azure">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Azure</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/vscode.png" class="d-block w-100" alt="visualstudiocode">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Visual Studio Code</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/spyder.jpg" class="d-block w-100" alt="spyder">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Spyder</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/jupyter.png" class="d-block w-100" alt="jupyter">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Jupyter</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/html.png" class="d-block w-100" alt="html">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>HTML</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/css.png" class="d-block w-100" alt="css">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>CSS</h5>
+                </div>
+            </div>
+            <div class="carousel-item logo">
+                <img src="Images/js.webp" class="d-block w-100" alt="javascript">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>JavaScript</h5>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon fleche" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon fleche" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        </div>
+        <!-- fin de la partie bootstrap carousel -->
+    </body>
+    <footer class="pied">
+        © 2026 Michael Dai - Tous droits réservés
+    </footer>
+</html>
+

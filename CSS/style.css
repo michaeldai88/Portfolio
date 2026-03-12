@@ -1,0 +1,156 @@
+.navbar{
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+
+.titre{
+  margin-top: 150px;
+  margin-left: 140px;
+  margin-right: 140px;
+  position: relative;
+}
+
+
+p{
+  color: gray;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+
+h1{
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+
+
+.portfolio{
+  width: 15%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+
+.description{
+  margin-top: 150px;
+  margin-left: 140px;
+  margin-right: 140px;
+  position: relative;
+}
+
+
+.exp{
+  width: auto;
+  margin-top: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+
+.comp{
+  width: auto;
+  margin-top: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+
+.lois{
+  width: auto;
+  margin-top: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+
+.pied{
+  background-color: lightgray;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  padding-bottom: 10px;
+}
+
+
+.presentation{
+  margin-top: 40px;
+}
+
+
+.experiences{
+  margin-top: 80px;
+  margin-left: 140px;
+  margin-right: 140px;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+
+.telecharger{
+  width: 19px;
+  margin-right: 8px;
+  margin-bottom: 3px;
+}
+
+
+.job{
+  margin-bottom: 10px;
+}
+
+
+.monop{
+  width: auto;
+  margin-top: 50px;
+  margin-left: 3%;
+  margin-right: 3%;
+  margin-bottom: 40px;
+
+}
+
+
+.more{
+  margin-bottom: 10px;
+}
+
+
+.logo{
+  width: 20%;
+  height: 500px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+
+.fleche{
+  background-color: black;
+}
+
+
+h5{
+  color: black;
+}
+
+
+.carousel-inner{
+  background-color: whitesmoke;
+}
+
+
+.menu{
+  color: white;
+}
+
+
+.upc{
+  width: 6%;
+  position: absolute;
+  right: 0;
+  top: 6%;
+}
