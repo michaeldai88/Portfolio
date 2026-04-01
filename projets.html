@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projets — Michael Dai</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/style.css">
+  <style>
+    .project-full {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 36px;
+      margin-bottom: 24px;
+      position: relative;
+      transition: box-shadow 0.2s ease;
+    }
+    .project-full:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.08); }
+
+    .project-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+
+    .project-period {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .project-full h2 {
+      font-family: var(--sans);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--dark);
+      margin-bottom: 10px;
+    }
+
+    .project-full .desc {
+      font-size: 14.5px;
+      color: var(--mid);
+      margin-bottom: 20px;
+      max-width: 680px;
+    }
+
+    .detail-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 20px 0;
+    }
+
+    .detail-list li {
+      font-size: 13.5px;
+      color: var(--mid);
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .detail-list li:last-child { border-bottom: none; }
+    .detail-list li::before {
+      content: '—';
+      color: var(--muted);
+      flex-shrink: 0;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- OFFCANVAS mobile uniquement -->
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mainNav" aria-labelledby="mainNavLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mainNavLabel">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav flex-column gap-2">
+            <li class="nav-item"><a class="nav-link mobile-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link mobile-link" href="profil.html">Profil</a></li>
+            <li class="nav-item"><a class="nav-link mobile-link active" href="projets.html">Projets</a></li>
+            <li class="nav-item"><a class="nav-link mobile-link" href="competences.html">Compétences</a></li>
+            <li class="nav-item"><a class="nav-link mobile-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar fixed-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="index.html">Michael Dai</a>
+
+      <!-- Liens desktop : visibles >= lg -->
+      <ul class="navbar-nav flex-row gap-1 d-none d-lg-flex ms-auto me-2">
+            <li class="nav-item"><a class="nav-link desktop-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link desktop-link" href="profil.html">Profil</a></li>
+            <li class="nav-item"><a class="nav-link desktop-link active" href="projets.html">Projets</a></li>
+            <li class="nav-item"><a class="nav-link desktop-link" href="competences.html">Compétences</a></li>
+            <li class="nav-item"><a class="nav-link desktop-link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Bouton hamburger : visible < lg -->
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNav" aria-controls="mainNav" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <section class="page-header">
+      <div class="container">
+        <p class="eyebrow">Travaux universitaires</p>
+        <h1>Projets</h1>
+        <p class="text-muted" style="max-width: 540px; font-size: 15px;">Trois projets menés en équipe au fil du BUT, couvrant enquête statistique, dataviz et modélisation.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- Projet 1 -->
+        <div class="project-full">
+          <div class="project-meta">
+            <span class="project-period">Nov. 2024 – Fév. 2025</span>
+          </div>
+          <h2>Enquête sur les pratiques culturelles des étudiants</h2>
+          <p class="desc">Étude de A à Z sur les pratiques culturelles des étudiants de l'Université Paris Cité — de la conception du questionnaire jusqu'à la présentation des résultats. Les données ont ensuite été réutilisées dans un projet de redressement statistique pour extrapoler les résultats à la population étudiante française.</p>
+          <ul class="detail-list">
+            <li>Conception du questionnaire en ligne via LimeSurvey</li>
+            <li>Collecte, nettoyage et structuration des données (Excel, SQL)</li>
+            <li>Analyse statistique et production de visualisations</li>
+            <li>Redressement statistique : extrapolation de l'échantillon à la population étudiante française</li>
+            <li>Présentation orale des résultats en équipe</li>
+          </ul>
+          <div>
+            <span class="tag">LimeSurvey</span>
+            <span class="tag">SQL</span>
+            <span class="tag">Excel</span>
+            <span class="tag">Redressement statistique</span>
+            <span class="tag">Présentation</span>
+          </div>
+        </div>
+
+        <!-- Projet 2 -->
+        <div class="project-full">
+          <div class="project-meta">
+            <span class="project-period">Mai 2025</span>
+            <span class="tag highlight" style="margin: 0;">🏆 Finaliste national</span>
+          </div>
+          <h2>Challenge National de Datavisualisation — INSEE</h2>
+          <p class="desc">Finaliste national du Challenge Dataviz BUT SD en partenariat avec l'INSEE. Production d'une datavisualisation complète sur la scolarisation des jeunes de 15 à 29 ans, de l'analyse des données à la présentation, en équipe, en moins de 8 heures.</p>
+          <ul class="detail-list">
+            <li>Sélection préalable au niveau local de l'IUT de Paris</li>
+            <li>Analyse et nettoyage de données INSEE sur la scolarisation des 15–29 ans</li>
+            <li>Conception d'une visualisation répondant à une problématique précise</li>
+            <li>Collaboration en équipe sous contrainte de temps forte (8h)</li>
+            <li>Présentation et défense des résultats devant jury national</li>
+          </ul>
+          <div>
+            <span class="tag">Python</span>
+            <span class="tag">Dataviz</span>
+            <span class="tag">INSEE</span>
+            <span class="tag">Travail en équipe</span>
+            <span class="tag">Analyse exploratoire</span>
+          </div>
+        </div>
+
+        <!-- Projet 3 -->
+        <div class="project-full">
+          <div class="project-meta">
+            <span class="project-period">Fév. – Juin 2025</span>
+          </div>
+          <h2>Étude statistique sur le bonheur dans le monde</h2>
+          <p class="desc">Étude comparative internationale à partir de données de bien-être mondial. Mise en place de tableaux de bord automatisés et rédaction de rapports de synthèse à destination d'un public non-technique.</p>
+          <ul class="detail-list">
+            <li>Nettoyage, préparation et structuration des données pour l'analyse</li>
+            <li>Création de tableaux de bord et de reportings automatisés (Power BI)</li>
+            <li>Planification des étapes du projet et collaboration en équipe</li>
+            <li>Rédaction de rapports clairs pour présenter les résultats</li>
+          </ul>
+          <div>
+            <span class="tag">Power BI</span>
+            <span class="tag">Python</span>
+            <span class="tag">Reporting</span>
+            <span class="tag">Dataviz</span>
+            <span class="tag">Travail en équipe</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <p>© 2026 Michael Dai</p>
+      <div class="d-flex gap-3">
+        <a href="index.html">Accueil</a>
+        <a href="profil.html">Profil</a>
+        <a href="projets.html">Projets</a>
+        <a href="competences.html">Compétences</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
