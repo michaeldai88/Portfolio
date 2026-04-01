@@ -1,65 +1,235 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Site E-Portfolio </title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    </head>
-    <body>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-        
-        <!-- partie bootstrap navbar -->
-        <nav class="navbar navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Portfolio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title menu" id="offcanvasDarkNavbarLabel">Menu</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                            <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
-                            <li class="nav-item"><a class="nav-link" href="experiences.html">Expériences</a></li>
-                            <li class="nav-item"><a class="nav-link" href="competences.html">Compétences</a></li>
-                            <li class="nav-item"><a class="nav-link" href="loisirs.html">Loisirs</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Michael Dai</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/style.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    .contact-info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .contact-info-item:last-child { border-bottom: none; }
+    .contact-icon {
+      width: 38px;
+      height: 38px;
+      background: #f0f0f0;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-info-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 3px;
+    }
+    .contact-info-value {
+      font-size: 14px;
+      color: var(--dark);
+      font-weight: 500;
+    }
+    .contact-info-value a {
+      color: var(--dark);
+      text-decoration: underline;
+      text-decoration-color: var(--border);
+      text-underline-offset: 3px;
+      transition: text-decoration-color 0.2s;
+    }
+    .contact-info-value a:hover { text-decoration-color: var(--dark); }
+
+    /* Form submit btn */
+    .btn-submit {
+      background: var(--black);
+      color: var(--white);
+      border: none;
+      padding: 12px 28px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.2s ease;
+      width: 100%;
+    }
+    .btn-submit:hover { background: var(--mid); }
+
+    #form-success {
+      display: none;
+      background: #edf7ed;
+      border: 1px solid #b8dbb8;
+      color: #2a7a2a;
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      font-size: 13.5px;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- OFFCANVAS mobile uniquement -->
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mainNav" aria-labelledby="mainNavLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mainNavLabel">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav flex-column gap-2">
+            <li class="nav-item"><a class="nav-link mobile-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link mobile-link" href="profil.html">Profil</a></li>
+            <li class="nav-item"><a class="nav-link mobile-link" href="projets.html">Projets</a></li>
+            <li class="nav-item"><a class="nav-link mobile-link" href="competences.html">Compétences</a></li>
+            <li class="nav-item"><a class="nav-link mobile-link active" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar fixed-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="index.html">Michael Dai</a>
+
+      <!-- Liens desktop : visibles >= lg -->
+      <ul class="navbar-nav flex-row gap-1 d-none d-lg-flex ms-auto me-2">
+            <li class="nav-item"><a class="nav-link desktop-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link desktop-link" href="profil.html">Profil</a></li>
+            <li class="nav-item"><a class="nav-link desktop-link" href="projets.html">Projets</a></li>
+            <li class="nav-item"><a class="nav-link desktop-link" href="competences.html">Compétences</a></li>
+            <li class="nav-item"><a class="nav-link desktop-link active" href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Bouton hamburger : visible < lg -->
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNav" aria-controls="mainNav" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <section class="page-header">
+      <div class="container">
+        <p class="eyebrow">Échangeons</p>
+        <h1>Contact</h1>
+        <p class="text-muted" style="max-width: 480px; font-size: 15px;">Une question, une opportunité de stage, ou simplement envie d'échanger ? Je lis tous les messages.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- Infos -->
+          <div>
+            <p class="eyebrow" style="margin-bottom: 24px;">Coordonnées</p>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg>
+              </div>
+              <div>
+                <p class="contact-info-label">Email</p>
+                <p class="contact-info-value"><a href="/cdn-cgi/l/email-protection#f39e9a909b92969f97929a83819cb3949e929a9fdd909c9e"><span class="__cf_email__" data-cfemail="4e23272d262f2b222a2f273e3c210e29232f2722602d2123">[email&#160;protected]</span></a></p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+              </div>
+              <div>
+                <p class="contact-info-label">LinkedIn</p>
+                <p class="contact-info-value"><a href="https://www.linkedin.com/in/-michael-dai" target="_blank">www.linkedin.com/in/-michael-dai</a></p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <p class="contact-info-label">Localisation</p>
+                <p class="contact-info-value">Paris, France</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-icon">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+              <div>
+                <p class="contact-info-label">Disponibilité</p>
+                <p class="contact-info-value">Stage 3 mois · À partir d'avril 2026</p>
+              </div>
+            </div>
+
+            <div style="margin-top: 32px;">
+              <div class="cv-block">
+                <div>
+                  <h3>Curriculum Vitæ</h3>
+                  <p>Téléchargez mon CV au format PDF.</p>
                 </div>
+                <a href="Michael Dai - CV VFF.pdf" class="btn btn-white" download>Télécharger</a>
+              </div>
             </div>
-        </nav>
-        <!-- fin de la partie bootstrap navbar -->
+          </div>
 
-        <img src="Images/upc.jpg" alt="logo paris cite" class="upc">
+          <!-- Formulaire -->
+          <div>
+            <p class="eyebrow" style="margin-bottom: 24px;">Formulaire</p>
 
-        <div class="titre">
-            <h1> Contact </h1>
+            <div id="contact-form">
+              <div class="mb-3">
+                <label class="form-label" for="name">Nom</label>
+                <input type="text" class="form-control" id="name" placeholder="Votre nom">
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="votre@email.com">
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="subject">Objet</label>
+                <input type="text" class="form-control" id="subject" placeholder="Stage, collaboration, question…">
+              </div>
+              <div class="mb-4">
+                <label class="form-label" for="message">Message</label>
+                <textarea class="form-control" id="message" placeholder="Votre message…"></textarea>
+              </div>
+              <button class="btn-submit" onclick="handleSubmit()">Envoyer le message</button>
+              <div id="form-success">
+                ✓ Merci pour votre message ! Je vous répondrai dans les meilleurs délais.
+              </div>
+              <p style="font-size: 12px; color: var(--muted); margin-top: 14px; text-align: center;">
+                Vous pouvez aussi m'écrire directement à <a href="/cdn-cgi/l/email-protection#076a6e646f66626b63666e77756847606a666e6b2964686a" style="color: var(--muted); text-decoration: underline;"><span class="__cf_email__" data-cfemail="81ece8e2e9e0e4ede5e0e8f1f3eec1e6ece0e8edafe2eeec">[email&#160;protected]</span></a>
+              </p>
+            </div>
+          </div>
+
         </div>
+      </div>
+    </section>
 
-        <!-- partie bootstrap formulaire -->
-        <div class="description">
-            <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Votre adresse mail</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="exemple@mail.com">
-            </div>
-            <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Votre message</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
-            </div>
-            <div class="col-12">
-                <button class="btn btn-dark" type="submit">Envoyer</button>
-            </div>
-        </div>
-        <!-- fin de la partie bootstrap formulaire -->
-    </body>
-    <footer class="pied">
-        © 2026 Michael Dai - Tous droits réservés
-    </footer>
-</html>
+  </main>
+
+  <footer class="footer">
+    <div class="container d-flex justify-content-between ali

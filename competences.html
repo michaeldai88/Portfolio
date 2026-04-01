@@ -1,180 +1,191 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title> Site E-Portfolio </title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="CSS/style.css">
-    </head>
-    <body>        
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-        
-        <!-- partie bootstrap navbar -->
-        <nav class="navbar navbar-dark bg-dark fixed-top">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="index.html">Portfolio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title menu" id="offcanvasDarkNavbarLabel">Menu</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                            <li class="nav-item"><a class="nav-link" href="profil.html">Profil</a></li>
-                            <li class="nav-item"><a class="nav-link" href="experiences.html">Expériences</a></li>
-                            <li class="nav-item"><a class="nav-link active" href="competences.html">Compétences</a></li>
-                            <li class="nav-item"><a class="nav-link" href="loisirs.html">Loisirs</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <!-- fin de la partie bootstrap navbar -->
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compétences — Michael Dai</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
 
-        <img src="Images/upc.jpg" alt="logo paris cite" class="upc">
+  <!-- OFFCANVAS mobile uniquement -->
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mainNav" aria-labelledby="mainNavLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mainNavLabel">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav flex-column gap-2">
+            <li class="nav-item"><a class="nav-link mobile-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link mobile-link" href="profil.html">Profil</a></li>
+            <li class="nav-item"><a class="nav-link mobile-link" href="projets.html">Projets</a></li>
+            <li class="nav-item"><a class="nav-link mobile-link active" href="competences.html">Compétences</a></li>
+            <li class="nav-item"><a class="nav-link mobile-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
 
-        <div class="titre">
-            <h1> Compétences </h1>
-        </div>
+  <!-- NAVBAR -->
+  <nav class="navbar fixed-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="index.html">Michael Dai</a>
 
-        <!-- partie bootstrap carousel -->
-        <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5" aria-label="Slide 6"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="6" aria-label="Slide 7"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="7" aria-label="Slide 8"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="8" aria-label="Slide 9"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="9" aria-label="Slide 10"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="10" aria-label="Slide 11"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="11" aria-label="Slide 12"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="12" aria-label="Slide 13"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="13" aria-label="Slide 14"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="14" aria-label="Slide 15"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="15" aria-label="Slide 16"></button>
-            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="16" aria-label="Slide 17"></button>
+      <!-- Liens desktop : visibles >= lg -->
+      <ul class="navbar-nav flex-row gap-1 d-none d-lg-flex ms-auto me-2">
+            <li class="nav-item"><a class="nav-link desktop-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link desktop-link" href="profil.html">Profil</a></li>
+            <li class="nav-item"><a class="nav-link desktop-link" href="projets.html">Projets</a></li>
+            <li class="nav-item"><a class="nav-link desktop-link active" href="competences.html">Compétences</a></li>
+            <li class="nav-item"><a class="nav-link desktop-link" href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Bouton hamburger : visible < lg -->
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNav" aria-controls="mainNav" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <section class="page-header">
+      <div class="container">
+        <p class="eyebrow">Savoir-faire</p>
+        <h1>Compétences</h1>
+        <p class="text-muted" style="max-width: 520px; font-size: 15px;">Un panorama complet de mes compétences techniques et méthodologiques, acquises en formation et en projets.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row g-5">
+
+          <div class="col-lg-6">
+            <div class="skill-group">
+              <div class="skill-group-title">Analyse statistique</div>
+              <span class="skill-pill">Inférence statistique</span>
+              <span class="skill-pill">Tests d'hypothèses</span>
+              <span class="skill-pill">Intervalles de confiance</span>
+              <span class="skill-pill">Statistique exploratoire</span>
+              <span class="skill-pill">Séries temporelles</span>
+              <span class="skill-pill">Techniques de sondage</span>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-title">Modélisation</div>
+              <span class="skill-pill">Régression linéaire</span>
+              <span class="skill-pill">Méthodes factorielles (ACP, AFC…)</span>
+              <span class="skill-pill">Classification</span>
+              <span class="skill-pill">Modélisation & Prévision</span>
+              <span class="skill-pill">Redressement statistique</span>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-title">Bases de données</div>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">Access</span>
+              <span class="skill-pill">Requêtage & Extraction</span>
+              <span class="skill-pill">Gestion & Structuration BDD</span>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="skill-group">
+              <div class="skill-group-title">Programmation</div>
+              <span class="skill-pill">Python</span>
+              <span class="skill-pill">numpy · pandas</span>
+              <span class="skill-pill">matplotlib · seaborn</span>
+              <span class="skill-pill">scipy · scikit-learn</span>
+              <span class="skill-pill">R</span>
+              <span class="skill-pill">SAS</span>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-title">Reporting & Visualisation</div>
+              <span class="skill-pill">Power BI</span>
+              <span class="skill-pill">Excel (avancé)</span>
+              <span class="skill-pill">PowerPoint</span>
+              <span class="skill-pill">Canva</span>
+              <span class="skill-pill">Datavisualisation</span>
+            </div>
+
+            <div class="skill-group">
+              <div class="skill-group-title">Outils & Enquête</div>
+              <span class="skill-pill">LimeSurvey</span>
+              <span class="skill-pill">HTML · CSS</span>
+              <span class="skill-pill">Présentation orale</span>
+            </div>
+          </div>
+
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active logo">
-                <img src="Images/python.png" class="d-block w-100" alt="python">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Python</h5>
+      </div>
+    </section>
+
+    <!-- Langues -->
+    <section class="section" style="background: #f5f5f5;">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5">
+            <p class="eyebrow">Communication</p>
+            <h2 style="margin-bottom: 24px;">Langues</h2>
+            <div>
+              <div class="lang-item">
+                <div>
+                  <span class="lang-name">Français</span>
+                  <p style="font-size: 12px; color: var(--muted); margin: 2px 0 0 0;">Langue maternelle</p>
                 </div>
-            </div>
-            <div class="carousel-item logo">
-                <img src="Images/R.png" class="d-block w-100" alt="Rstudio">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>R Studio</h5>
+                <span style="font-size: 13px; font-weight: 600; color: var(--dark);">C2</span>
+              </div>
+              <div class="lang-item">
+                <div>
+                  <span class="lang-name">Chinois</span>
+                  <p style="font-size: 12px; color: var(--muted); margin: 2px 0 0 0;">Bilingue — parcours international</p>
                 </div>
-            </div>
-            <div class="carousel-item logo">
-                <img src="Images/sql.png" class="d-block w-100" alt="sql">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>SQL</h5>
+                <span style="font-size: 13px; font-weight: 600; color: var(--dark);">C2</span>
+              </div>
+              <div class="lang-item">
+                <div>
+                  <span class="lang-name">Anglais</span>
+                  <p style="font-size: 12px; color: var(--muted); margin: 2px 0 0 0;">Courant — professionnel</p>
                 </div>
+                <span style="font-size: 13px; font-weight: 600; color: var(--dark);">B2</span>
+              </div>
             </div>
-            <div class="carousel-item logo">
-                <img src="Images/sas.png" class="d-block w-100" alt="sas">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>SAS</h5>
-                </div>
+          </div>
+          <div class="col-lg-6 offset-lg-1">
+            <p class="eyebrow">Transversal</p>
+            <h2 style="margin-bottom: 24px;">Savoir-être</h2>
+            <div class="d-flex flex-wrap gap-2">
+              <span class="skill-pill">Travail en équipe</span>
+              <span class="skill-pill">Rigueur</span>
+              <span class="skill-pill">Adaptabilité</span>
+              <span class="skill-pill">Ponctualité</span>
+              <span class="skill-pill">Communication écrite</span>
+              <span class="skill-pill">Communication orale</span>
+              <span class="skill-pill">Gestion de projet</span>
+              <span class="skill-pill">Rédaction de rapports</span>
             </div>
-            <div class="carousel-item logo">
-                <img src="Images/word.png" class="d-block w-100" alt="word">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Word</h5>
-                </div>
-            </div>
-            <div class="carousel-item logo">
-                <img src="Images/excel.png" class="d-block w-100" alt="excel">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Excel</h5>
-                </div>
-            </div>
-            <div class="carousel-item logo">
-                <img src="Images/ppt.png" class="d-block w-100" alt="powerpoint">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>PowerPoint</h5>
-                </div>
-            </div>
-            <div class="carousel-item logo">
-                <img src="Images/access.png" class="d-block w-100" alt="access">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Access</h5>
-                </div>
-            </div>
-            <div class="carousel-item logo">
-                <img src="Images/pbi.png" class="d-block w-100" alt="powerbi">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Power BI</h5>
-                </div>
-            </div>
-            <div class="carousel-item logo">
-                <img src="Images/azure.png" class="d-block w-100" alt="azure">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Azure</h5>
-                </div>
-            </div>
-            <div class="carousel-item logo">
-                <img src="Images/vscode.png" class="d-block w-100" alt="visualstudiocode">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Visual Studio Code</h5>
-                </div>
-            </div>
-            <div class="carousel-item logo">
-                <img src="Images/spyder.jpg" class="d-block w-100" alt="spyder">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Spyder</h5>
-                </div>
-            </div>
-            <div class="carousel-item logo">
-                <img src="Images/jupyter.png" class="d-block w-100" alt="jupyter">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Jupyter</h5>
-                </div>
-            </div>
-            <div class="carousel-item logo">
-                <img src="Images/html.png" class="d-block w-100" alt="html">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>HTML</h5>
-                </div>
-            </div>
-            <div class="carousel-item logo">
-                <img src="Images/css.png" class="d-block w-100" alt="css">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>CSS</h5>
-                </div>
-            </div>
-            <div class="carousel-item logo">
-                <img src="Images/js.webp" class="d-block w-100" alt="javascript">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>JavaScript</h5>
-                </div>
-            </div>
+          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon fleche" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-            <span class="carousel-control-next-icon fleche" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-        </div>
-        <!-- fin de la partie bootstrap carousel -->
-    </body>
-    <footer class="pied">
-        © 2026 Michael Dai - Tous droits réservés
-    </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <p>© 2026 Michael Dai</p>
+      <div class="d-flex gap-3">
+        <a href="index.html">Accueil</a>
+        <a href="profil.html">Profil</a>
+        <a href="projets.html">Projets</a>
+        <a href="competences.html">Compétences</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
 </html>
-
