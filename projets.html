@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projets — Michael Dai</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+
+  <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="mainNav" aria-labelledby="mainNavLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="mainNavLabel">Menu</h5>
+      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="navbar-nav flex-column gap-1">
+        <li class="nav-item"><a class="nav-link mobile-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="profil.html">Profil</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link active" href="projets.html">Projets</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="competences.html">Compétences</a></li>
+        <li class="nav-item"><a class="nav-link mobile-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <nav class="navbar fixed-top">
+    <div class="container-fluid px-4">
+      <a class="navbar-brand" href="index.html">Michael Dai</a>
+      <ul class="navbar-nav flex-row gap-1 d-none d-lg-flex ms-auto me-2">
+        <li class="nav-item"><a class="nav-link desktop-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link desktop-link" href="profil.html">Profil</a></li>
+        <li class="nav-item"><a class="nav-link desktop-link active" href="projets.html">Projets</a></li>
+        <li class="nav-item"><a class="nav-link desktop-link" href="competences.html">Compétences</a></li>
+        <li class="nav-item"><a class="nav-link desktop-link" href="contact.html">Contact</a></li>
+      </ul>
+      <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mainNav" aria-controls="mainNav" aria-label="Menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </nav>
+
+  <main class="page">
+
+    <section class="page-header">
+      <div class="container">
+        <p class="eyebrow">Travaux universitaires</p>
+        <h1>Projets</h1>
+        <p class="text-muted" style="max-width:540px;font-size:15px;">Trois projets menés en équipe au fil du BUT, couvrant enquête statistique, datavisualisation et modélisation.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+
+        <!-- ===== Projet 1 ===== -->
+        <div class="project-full" data-aos>
+          <div class="row g-0">
+            <!-- Illustration -->
+            <div class="col-lg-3 d-flex align-items-center justify-content-center" style="background:#f4f4f4;border-right:1px solid var(--border);min-height:180px;">
+              <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.1">
+                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                <line x1="3" y1="9" x2="21" y2="9"/>
+                <line x1="9" y1="21" x2="9" y2="9"/>
+              </svg>
+            </div>
+            <!-- Contenu -->
+            <div class="col-lg-9">
+              <div class="project-full-body">
+                <div class="project-meta">
+                  <span class="project-period">Nov. 2024 – Fév. 2025</span>
+                </div>
+                <h2>Enquête sur les pratiques culturelles des étudiants</h2>
+                <p class="desc">Étude de A à Z sur les pratiques culturelles des étudiants de l'Université Paris Cité — de la conception du questionnaire à la présentation des résultats. Les données ont ensuite servi à un projet de redressement statistique pour extrapoler les résultats à l'ensemble de la population étudiante française.</p>
+                <ul class="detail-list">
+                  <li>Conception du questionnaire en ligne via LimeSurvey</li>
+                  <li>Collecte, nettoyage et structuration des données (Excel, SQL)</li>
+                  <li>Analyse statistique et production de visualisations</li>
+                  <li>Redressement statistique : extrapolation à la population étudiante française</li>
+                  <li>Présentation orale des résultats en équipe</li>
+                </ul>
+                <div class="mb-3">
+                  <span class="tag">LimeSurvey</span>
+                  <span class="tag">SQL</span>
+                  <span class="tag">Excel</span>
+                  <span class="tag">Redressement statistique</span>
+                  <span class="tag">Présentation</span>
+                </div>
+                <a href="#" class="btn btn-dark btn-sm">Voir la présentation &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Projet 2 ===== -->
+        <div class="project-full" data-aos data-aos-delay="100">
+          <div class="row g-0">
+            <div class="col-lg-3 d-flex align-items-center justify-content-center" style="background:#f4f4f4;border-right:1px solid var(--border);min-height:180px;">
+              <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.1">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <div class="col-lg-9">
+              <div class="project-full-body">
+                <div class="project-meta">
+                  <span class="project-period">Mai 2025</span>
+                  <span class="tag" style="margin:0;">🏆 Meilleure dataviz de l'IUT</span>
+                </div>
+                <h2>Challenge de Datavisualisation — INSEE</h2>
+                <p class="desc">Meilleure datavisualisation de l'IUT de Paris dans le cadre du Challenge Dataviz BUT SD en partenariat avec l'INSEE. Analyse de la scolarisation des 15–29 ans, de la donnée brute à la présentation finale, produite en équipe en moins de 8 heures.</p>
+                <ul class="detail-list">
+                  <li>Sélection au niveau local de l'IUT de Paris</li>
+                  <li>Analyse et nettoyage de données INSEE sur la scolarisation des 15–29 ans</li>
+                  <li>Conception d'une visualisation répondant à une problématique précise</li>
+                  <li>Collaboration en équipe sous contrainte de temps (8h)</li>
+                  <li>Présentation des résultats devant jury</li>
+                </ul>
+                <div class="mb-3">
+                  <span class="tag">Python</span>
+                  <span class="tag">Dataviz</span>
+                  <span class="tag">INSEE</span>
+                  <span class="tag">Analyse exploratoire</span>
+                  <span class="tag">Travail en équipe</span>
+                </div>
+                <a href="#" class="btn btn-dark btn-sm">Voir la présentation &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ===== Projet 3 ===== -->
+        <div class="project-full" data-aos data-aos-delay="200">
+          <div class="row g-0">
+            <div class="col-lg-3 d-flex align-items-center justify-content-center" style="background:#f4f4f4;border-right:1px solid var(--border);min-height:180px;">
+              <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="1.1">
+                <rect x="3" y="3" width="7" height="7" rx="1"/>
+                <rect x="14" y="3" width="7" height="7" rx="1"/>
+                <rect x="3" y="14" width="7" height="7" rx="1"/>
+                <rect x="14" y="14" width="7" height="7" rx="1"/>
+              </svg>
+            </div>
+            <div class="col-lg-9">
+              <div class="project-full-body">
+                <div class="project-meta">
+                  <span class="project-period">Fév. – Juin 2025</span>
+                </div>
+                <h2>Étude statistique sur le bonheur dans le monde</h2>
+                <p class="desc">Étude comparative internationale à partir de données de bien-être mondial. Tableaux de bord automatisés sous Power BI et rédaction de rapports de synthèse à destination d'un public non-technique.</p>
+                <ul class="detail-list">
+                  <li>Nettoyage, préparation et structuration des données</li>
+                  <li>Création de tableaux de bord et reportings automatisés (Power BI)</li>
+                  <li>Planification des étapes et collaboration en équipe</li>
+                  <li>Rédaction de rapports de synthèse</li>
+                </ul>
+                <div class="mb-3">
+                  <span class="tag">Power BI</span>
+                  <span class="tag">Python</span>
+                  <span class="tag">Reporting</span>
+                  <span class="tag">Dataviz</span>
+                  <span class="tag">Travail en équipe</span>
+                </div>
+                <a href="#" class="btn btn-dark btn-sm">Voir le rapport &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+      <p>© 2026 Michael Dai</p>
+      <div class="d-flex gap-3">
+        <a href="index.html">Accueil</a>
+        <a href="profil.html">Profil</a>
+        <a href="projets.html">Projets</a>
+        <a href="competences.html">Compétences</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script>
+    (function() {
+      var els = document.querySelectorAll('[data-aos]');
+      var io = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
+          if (e.isIntersecting) { e.target.classList.add('aos-animate'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12 });
+      els.forEach(function(el) { io.observe(el); });
+    })();
+  </script>
+</body>
+</html>
